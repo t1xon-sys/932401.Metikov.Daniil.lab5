@@ -147,3 +147,8 @@ function initPage() {
         themeButton.textContent = isDark ? "☀️ Светлая тема" : "🌙 Тёмная тема";
         themeButton.setAttribute("aria-pressed", String(isDark));
     }
+
+    function updateToggleButton(isHidden) {
+        toggleButton.textContent = isHidden ? "Развернуть проекты" : "Свернуть проекты";
+        toggleButton.setAttribute("aria-expanded", String(!isHidden));
+    }
