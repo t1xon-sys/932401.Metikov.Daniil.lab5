@@ -116,3 +116,26 @@ function initPage() {
     const removeButton = document.getElementById("remove-project-btn");
     const toggleButton = document.getElementById("toggle-projects-btn");
     const themeButton = document.getElementById("theme-toggle");
+
+    const required = [
+        [container, "контейнер .projects-list"],
+        [addButton, "кнопка #add-project-btn"],
+        [removeButton, "кнопка #remove-project-btn"],
+        [toggleButton, "кнопка #toggle-projects-btn"],
+        [themeButton, "кнопка #theme-toggle"]
+    ];
+    
+    let allFound = true;
+    required.forEach(function (pair) {
+        const element = pair[0];
+        const name = pair[1];
+        if (!element) {
+            console.error("Ошибка: не найден элемент — " + name);
+            allFound = false;
+        }
+    });
+ 
+    if (!allFound) {
+        console.error("Скрипт остановлен: на странице не хватает нужных элементов.");
+        return;
+    }
