@@ -228,3 +228,21 @@ function initPage() {
         saveToStorage(STORAGE_KEYS.collapsed, isHidden);
         console.log(isHidden ? "Проекты свёрнуты" : "Проекты развёрнуты");
     });
+
+     container.addEventListener("click", function (event) {
+        const button = event.target.closest(".btn");
+        if (!button) {
+            return;
+        }
+        const card = button.closest(".project-card");
+        if (!card) {
+            return;
+        }
+        const data = getCardData(card);
+        alert(data.title + "\n\n" + data.description);
+    });
+ 
+    console.log("Страница инициализирована. Проектов: " + getProjectCards(container).length);
+}
+ 
+document.addEventListener("DOMContentLoaded", initPage);
