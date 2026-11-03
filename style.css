@@ -506,3 +506,24 @@ body.theme-dark .control-btn:focus-visible {
 .projects-list.hidden {
     display: none;
 }
+
+.theme-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+ 
+.theme-btn:hover {
+    background-color: var(--color-main);
+}
+ 
+.theme-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: -4px;
+}
