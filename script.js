@@ -187,3 +187,13 @@ function initPage() {
             icon: DEFAULT_ICON
         });
         container.appendChild(card);
+       
+        if (container.classList.contains("hidden")) {
+            container.classList.remove("hidden");
+            updateToggleButton(false);
+            saveToStorage(STORAGE_KEYS.collapsed, false);
+        }
+ 
+        saveProjects(container);
+        console.log("Добавлен проект: " + title.trim());
+    });
