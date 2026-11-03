@@ -5,8 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Студент-разработчик</title>
+    <style>
+        .skiil-card:nth-child(1){
+            border-style:dashed;
+        }
+         #email {
+            padding: 12px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--color-main);
+            transition: border-color 0.2s ease;
+        }
+         #email:focus {
+            border-color: var(--color-accent);
+            outline: none;
+        }
+    </style>
 </head>
-<body>
+<body class="theme-light">
+<header>
+    <div class="header-logo">
+        <img src="image/spider.jpg" alt="Человек-паук" width="285" height="143">
+    </div>
+    <div class="header-text">
+        <h1>Метиков Даниил</h1>
+        <h2>Студент-разработчик</h2>
+    </div>
+    <div class="header-logo">
+        <img src="image/IAMaCS.png" alt="Факультет" width="405" height="140">
+    </div>
+</header>
+ <nav class="main-nav" aria-label="Основное меню">
+    <ul class="nav-list">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#gallery">Скриншоты</a></li>
+        <li><a href="#contact">Обратная связь</a></li>
+        <li><button type="button" id="theme-toggle" class="theme-btn" aria-pressed="false">🌙 Тёмная тема</button></li>
+    </ul>
+</nav>
+<main>
+    <section id="about">   
+        <h3>Мой Аватар</h3>
+        <img src="image/avatar.JPG" alt="Мой аватар" width="300" height="300">
+    </section>
+ 
+    <section id="skills">
+        <h3>Навыки</h3>
+        <ul class="skills-grid">
+            <li class="skill-card">C++</li>
+            <li class="skill-card top-skill">Python<span class="badge">Top skill</span>
+            </li>
+            <li class="skill-card">Pascal</li>
+            <li class="skill-card">Git</li>
+            <li class="skill-card">MPI</li>
+            <li class="skill-card">HTML</li>
+        </ul>
+    </section>
+   
+    <aside>
+        <h3>Любимые технологии</h3>
+        <ul>
+            <li>Visual Studio Code</li>
+            <li>PyCharm</li>
+            <li>Git</li>
+        </ul>
+        <p><a href="https://github.com/t1xon-sys?tab=overview&from=2026-10-01&to=2026-10-08" target="_blank" rel="noopener">Мой GitHub</a></p>
+    </aside>
+   
+    <section id="projects">
+    <h3>Проекты</h3>
+ 
+    <div class="project-controls">
+        <button type="button" id="add-project-btn" class="control-btn">➕ Добавить проект</button>
+        <button type="button" id="remove-project-btn" class="control-btn control-btn--danger">🗑 Удалить последний</button>
+        <button type="button" id="toggle-projects-btn" class="control-btn" aria-controls="projects-list" aria-expanded="true">Свернуть проекты</button>
+    </div>
+ 
+    <div class="projects-list" id="projects-list">
+ 
+        <article class="project-card project-card--1">
+            <div class="project-icon" aria-hidden="true">🧠</div>
+            <div class="project-body">
+                <h4>Экспертная система на нечёткой логике</h4>
+                <p class="stack">Проект направлен на разработку экспертной системы, которая использует методы нечёткой логики для диагностики состояния компьютера. Система анализирует различные параметры и предоставляет рекомендации по улучшению производительности.</p>
+                <button type="button" class="btn">Подробнее</button>
+            </div>
+        </article>
+ 
+        <article class="project-card project-card--2">
+            <div class="project-icon" aria-hidden="true">🤖</div>
+            <div class="project-body">
+                <h4>Экспертная система на основе языковой модели</h4>
+                <p class="stack">Проект направлен на разработку экспертной системы, которая использует языковую модель (GigaChat, Gemini) для диагностики состояния компьютера. Система анализирует различные параметры и предоставляет рекомендации по улучшению производительности.</p>
+                <button type="button" class="btn">Подробнее</button>
+            </div>
+        </article>
+ 
+        <article class="project-card project-card--3">
+            <div class="project-icon" aria-hidden="true">🔎</div>
+            <div class="project-body">
+                <h4>Простая RAG-система</h4>
+                <p class="stack">Проект направлен на разработку простой RAG системы, которая использует методы анализа и генерации текста для решения различных задач.</p>
+                <button type="button" class="btn">Подробнее</button>
+            </div>
+        </article>
+ 
+        <article class="project-card project-card--4">
+            <div class="project-icon" aria-hidden="true">🛠️</div>
+            <div class="project-body">
+                <h4>Интеллектуальные агенты с вызовом инструментов</h4>
+                <p class="stack">Проект направлен на разработку интеллектуальных агентов, которые используют языковые модели и вызов инструментов для решения различных задач.</p>
+                <button type="button" class="btn">Подробнее</button>
+            </div>
+        </article>
+ 
+        <article class="project-card project-card--5">
+            <div class="project-icon" aria-hidden="true">🔢</div>
+            <div class="project-body">
+                <h4>Реализация метода простых итераций для решения СЛУ</h4>
+                <p class="stack">Проект направлен на реализацию метода простых итераций для решения систем линейных алгебраических уравнений, что позволяет эффективно находить решения в различных вычислениях.</p>
+                <button type="button" class="btn">Подробнее</button>
+            </div>
+        </article>
+ 
+    </div>
+</section>
+ 
+<section id="gallery">
+    <h3>Скриншоты проектов</h3>
+    <div class="gallery">
+        <figure>
+            <img src="image/work-Exp-System.png" alt="Интерфейс работы экспертной системы на нечёткой логике" width="800" height="500">
+            <figcaption>Нечёткая экспертная система</figcaption>
+        </figure>
+        <figure>
+            <img src="image/DialogWithLLM.png" alt="Диалог экспертной системы с языковой моделью" width="800" height="500">
+            <figcaption>Экспертная система на LLM</figcaption>
+        </figure>
+        <figure>
+            <img src="image/testRadSys.png" alt="Работа RAG-системы: вопрос и найденные фрагменты" width="800" height="500">
+            <figcaption>RAG-система</figcaption>
+        </figure>
+        <figure>
+            <img src="image/WorkAiAg.png" alt="Лог работы интеллектуального агента" width="800" height="500">
+            <figcaption>Интеллектуальный агент</figcaption>
+        </figure>
+        
+    </div>
+</section>
     
+    <section id="contact">
+        <h3>Обратная связь</h3>
+        <form action="#">
+            <p>
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name" placeholder="Ваше имя"> 
+            </p>
+            <p>
+                <label for="email">Ваш email</label>
+                <input type="email" id="email" name="email" placeholder="Ваш email" >
+            </p>
+            <p>
+                <label for="message">Ваше сообщение</label>
+                <textarea id="message" name="message" placeholder="Ваше сообщение"></textarea>
+            </p>
+            <p>
+                <button type="submit">Отправить</button>
+            </p>
+        </form>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2026 Метиков Даниил.</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
