@@ -139,3 +139,11 @@ function initPage() {
         console.error("Скрипт остановлен: на странице не хватает нужных элементов.");
         return;
     }
+
+    function applyTheme(theme) {
+        const isDark = theme === "dark";
+        document.body.classList.toggle("theme-dark", isDark);
+        document.body.classList.toggle("theme-light", !isDark);
+        themeButton.textContent = isDark ? "☀️ Светлая тема" : "🌙 Тёмная тема";
+        themeButton.setAttribute("aria-pressed", String(isDark));
+    }
