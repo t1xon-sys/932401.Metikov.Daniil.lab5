@@ -221,3 +221,10 @@ function initPage() {
         saveToStorage(STORAGE_KEYS.theme, newTheme);
         console.log("Тема переключена: " + newTheme);
     });
+
+     toggleButton.addEventListener("click", function () {
+        const isHidden = container.classList.toggle("hidden");
+        updateToggleButton(isHidden);
+        saveToStorage(STORAGE_KEYS.collapsed, isHidden);
+        console.log(isHidden ? "Проекты свёрнуты" : "Проекты развёрнуты");
+    });
