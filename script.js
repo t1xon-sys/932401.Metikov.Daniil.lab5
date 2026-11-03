@@ -23,3 +23,24 @@ function loadFromStorage(key) {
         return null;
     }
 }
+
+function getCardData(card) {
+    const title = card.querySelector("h4");
+    const description = card.querySelector(".stack");
+    const icon = card.querySelector(".project-icon");
+ 
+    let modifier = "";
+    card.classList.forEach(function (cls) {
+        if (cls.startsWith("project-card--")) {
+            modifier = cls;
+        }
+    });
+ 
+    return {
+        title: title ? title.textContent.trim() : "Без названия",
+        description: description ? description.textContent.trim() : "",
+        icon: icon ? icon.textContent.trim() : DEFAULT_ICON,
+        modifier: modifier
+    };
+}
+
