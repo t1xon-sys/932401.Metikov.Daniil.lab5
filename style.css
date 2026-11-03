@@ -380,3 +380,41 @@ body {
 body.theme-light {
     color-scheme: light;
 }
+
+body.theme-dark {
+    color-scheme: dark;
+    --color-main: #3b7dd8;
+    --color-accent: #0b1e3a;
+    --color-bg: #0f1520;
+    --color-card-bg: #1a2230;
+    --color-text: #e4ebf5;
+    --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.5);
+    --shadow-strong: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+ 
+body.theme-dark aside {
+    background-color: #16202e;
+}
+ 
+body.theme-dark .skill-card,
+body.theme-dark label {
+    color: #cfe0ff;
+}
+ 
+body.theme-dark .skill-card:hover {
+    border-color: #7fb2ff;
+}
+ 
+body.theme-dark input,
+body.theme-dark textarea {
+    background-color: #121a26;
+    color: var(--color-text);
+}
+ 
+body.theme-dark main a:link {
+    color: #7fb2ff;
+}
+ 
+body.theme-dark main a:visited {
+    color: #c39be0;
+}
