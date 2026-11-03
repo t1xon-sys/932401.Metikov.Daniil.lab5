@@ -163,3 +163,27 @@ function initPage() {
         container.classList.add("hidden");
     }
     updateToggleButton(savedCollapsed);
+
+    addButton.addEventListener("click", function () {
+        const title = prompt("Название проекта:", "");
+        if (title === null) {
+            console.log("Добавление проекта отменено");
+            return;
+        }
+        if (title.trim() === "") {
+            alert("Название проекта не может быть пустым");
+            return;
+        }
+ 
+        const description = prompt("Краткое описание проекта:", "");
+        if (description === null) {
+            console.log("Добавление проекта отменено");
+            return;
+        }
+ 
+        const card = createProjectCard({
+            title: title.trim(),
+            description: description.trim() || "Описание пока не добавлено.",
+            icon: DEFAULT_ICON
+        });
+        container.appendChild(card);
