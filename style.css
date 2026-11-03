@@ -495,3 +495,10 @@ body.theme-dark main a:visited {
 body.theme-dark .control-btn:focus-visible {
     outline-color: #7fb2ff;
 }
+
+.project-card .btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
