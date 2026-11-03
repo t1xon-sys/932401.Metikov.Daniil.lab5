@@ -109,3 +109,10 @@ function restoreProjects(container) {
  
     console.log("Восстановлено проектов из localStorage: " + saved.length);
 }
+
+function initPage() {
+    const container = document.querySelector(".projects-list");
+    const addButton = document.getElementById("add-project-btn");
+    const removeButton = document.getElementById("remove-project-btn");
+    const toggleButton = document.getElementById("toggle-projects-btn");
+    const themeButton = document.getElementById("theme-toggle");
