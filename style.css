@@ -419,43 +419,28 @@ body.theme-dark main a:visited {
     color: #c39be0;
 }
 
-body.theme-dark {
-    color-scheme: dark;
-    --color-main: #3b7dd8;
-    --color-accent: #0b1e3a;
-    --color-bg: #0f1520;
-    --color-card-bg: #1a2230;
-    --color-text: #e4ebf5;
-    --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.5);
-    --shadow-strong: 0 2px 6px rgba(0, 0, 0, 0.6);
+
+.theme-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
- 
-body.theme-dark aside {
-    background-color: #16202e;
+
+.theme-btn:hover {
+    background-color: var(--color-main);
 }
- 
-body.theme-dark .skill-card,
-body.theme-dark label {
-    color: #cfe0ff;
+
+.theme-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: -4px;
 }
- 
-body.theme-dark .skill-card:hover {
-    border-color: #7fb2ff;
-}
- 
-body.theme-dark input,
-body.theme-dark textarea {
-    background-color: #121a26;
-    color: var(--color-text);
-}
- 
-body.theme-dark main a:link {
-    color: #7fb2ff;
-}
- 
-body.theme-dark main a:visited {
-    color: #c39be0;
-}
+
 
 .project-controls {
     display: flex;
@@ -505,25 +490,4 @@ body.theme-dark .control-btn:focus-visible {
 
 .projects-list.hidden {
     display: none;
-}
-
-.theme-btn {
-    display: block;
-    width: 100%;
-    padding: 14px 20px;
-    background: transparent;
-    color: #ffffff;
-    border: none;
-    font: inherit;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
- 
-.theme-btn:hover {
-    background-color: var(--color-main);
-}
- 
-.theme-btn:focus-visible {
-    outline: 2px solid #ffffff;
-    outline-offset: -4px;
 }
