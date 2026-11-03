@@ -197,3 +197,20 @@ function initPage() {
         saveProjects(container);
         console.log("Добавлен проект: " + title.trim());
     });
+
+    removeButton.addEventListener("click", function () {
+        const cards = getProjectCards(container);
+ 
+        if (cards.length === 0) {
+            console.log("Нет проектов для удаления");
+            alert("Список пуст");
+            return;
+        }
+ 
+        const lastCard = cards[cards.length - 1];
+        const removedTitle = getCardData(lastCard).title;
+        lastCard.remove();
+ 
+        saveProjects(container);
+        console.log("Удалён проект: " + removedTitle);
+    });
