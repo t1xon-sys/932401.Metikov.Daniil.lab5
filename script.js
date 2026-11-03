@@ -152,3 +152,14 @@ function initPage() {
         toggleButton.textContent = isHidden ? "Развернуть проекты" : "Свернуть проекты";
         toggleButton.setAttribute("aria-expanded", String(!isHidden));
     }
+
+    restoreProjects(container);
+ 
+    const savedTheme = loadFromStorage(STORAGE_KEYS.theme);
+    applyTheme(savedTheme === "dark" ? "dark" : "light");
+ 
+    const savedCollapsed = loadFromStorage(STORAGE_KEYS.collapsed) === true;
+    if (savedCollapsed) {
+        container.classList.add("hidden");
+    }
+    updateToggleButton(savedCollapsed);
