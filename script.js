@@ -156,7 +156,7 @@ function initPage() {
     restoreProjects(container);
  
     const savedTheme = loadFromStorage(STORAGE_KEYS.theme);
-    applyTheme(savedTheme === "dark" ? "dark" : "light");
+    applyTheme(savedTheme === "light" ? "light" : "dark");
  
     const savedCollapsed = loadFromStorage(STORAGE_KEYS.collapsed) === true;
     if (savedCollapsed) {
