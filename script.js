@@ -214,3 +214,10 @@ function initPage() {
         saveProjects(container);
         console.log("Удалён проект: " + removedTitle);
     });
+
+     themeButton.addEventListener("click", function () {
+        const newTheme = document.body.classList.contains("theme-dark") ? "light" : "dark";
+        applyTheme(newTheme);
+        saveToStorage(STORAGE_KEYS.theme, newTheme);
+        console.log("Тема переключена: " + newTheme);
+    });
